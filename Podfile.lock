@@ -1,0 +1,59 @@
+PODS:
+  - FBSDKCoreKit (7.0.1):
+    - FBSDKCoreKit/Basics (= 7.0.1)
+    - FBSDKCoreKit/Core (= 7.0.1)
+  - FBSDKCoreKit/Basics (7.0.1)
+  - FBSDKCoreKit/Core (7.0.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (7.0.1):
+    - FBSDKLoginKit/Login (= 7.0.1)
+  - FBSDKLoginKit/Login (7.0.1):
+    - FBSDKCoreKit (~> 7.0.1)
+  - Realm (5.0.3):
+    - Realm/Headers (= 5.0.3)
+  - Realm/Headers (5.0.3)
+  - RealmSwift (5.0.3):
+    - Realm (= 5.0.3)
+  - ReSwift (5.0.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - Wormholy (1.6.2)
+
+DEPENDENCIES:
+  - FBSDKLoginKit
+  - RealmSwift
+  - ReSwift
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - Wormholy
+
+SPEC REPOS:
+  trunk:
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - Realm
+    - RealmSwift
+    - ReSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - Wormholy
+
+SPEC CHECKSUMS:
+  FBSDKCoreKit: 9cc05bec0568a5955c82eb59ae95da0fe125b88d
+  FBSDKLoginKit: ecc6fd43c81b60f5b5e9388d58f137aff4a5d00b
+  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
+  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Wormholy: 5a186f877829e7d488963b09f204e0186b40c9a8
+
+PODFILE CHECKSUM: 503a3b78940bf0b4a3bd8e26e5b75bc0cfe4acb5
+
+COCOAPODS: 1.9.3
