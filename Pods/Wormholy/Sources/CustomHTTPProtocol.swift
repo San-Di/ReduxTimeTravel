@@ -46,7 +46,7 @@ public class CustomHTTPProtocol: URLProtocol {
         sessionTask = session?.dataTask(with: newRequest as URLRequest)
         sessionTask?.resume()
         
-        currentRequest = RequestModel(request: newRequest, session: session)
+        currentRequest = RequestModel(request: newRequest)
         Storage.shared.saveRequest(request: currentRequest)
     }
     

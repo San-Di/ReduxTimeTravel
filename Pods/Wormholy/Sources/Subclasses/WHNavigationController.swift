@@ -13,6 +13,11 @@ class WHNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Always adopt a light interface style.
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        
         //Large titles
         if #available(iOS 11.0, *) {
             navigationBar.prefersLargeTitles = true
@@ -22,12 +27,13 @@ class WHNavigationController: UINavigationController {
         // Appearance
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.label]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.label]
-            navBarAppearance.backgroundColor = UIColor.systemBackground
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+            navBarAppearance.backgroundColor = Colors.Gray.lighestGray
             navigationBar.standardAppearance = navBarAppearance
             navigationBar.scrollEdgeAppearance = navBarAppearance
-            navigationBar.tintColor = .systemBlue
+            navigationBar.tintColor = .blue
         }
 
     }

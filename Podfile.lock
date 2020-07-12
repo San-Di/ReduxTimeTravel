@@ -1,19 +1,24 @@
 PODS:
-  - FBSDKCoreKit (7.0.1):
-    - FBSDKCoreKit/Basics (= 7.0.1)
-    - FBSDKCoreKit/Core (= 7.0.1)
-  - FBSDKCoreKit/Basics (7.0.1)
-  - FBSDKCoreKit/Core (7.0.1):
+  - Alamofire (5.0.5)
+  - FBSDKCoreKit (6.3.0):
+    - FBSDKCoreKit/Basics (= 6.3.0)
+    - FBSDKCoreKit/Core (= 6.3.0)
+  - FBSDKCoreKit/Basics (6.3.0)
+  - FBSDKCoreKit/Core (6.3.0):
     - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (7.0.1):
-    - FBSDKLoginKit/Login (= 7.0.1)
-  - FBSDKLoginKit/Login (7.0.1):
-    - FBSDKCoreKit (~> 7.0.1)
-  - Realm (5.0.3):
-    - Realm/Headers (= 5.0.3)
-  - Realm/Headers (5.0.3)
-  - RealmSwift (5.0.3):
-    - Realm (= 5.0.3)
+  - FBSDKLoginKit (6.3.0):
+    - FBSDKLoginKit/Login (= 6.3.0)
+  - FBSDKLoginKit/Login (6.3.0):
+    - FBSDKCoreKit (~> 6.3.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ReachabilitySwift (5.0.0)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
   - ReSwift (5.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -21,39 +26,58 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - Wormholy (1.6.2)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
+  - SwiftyJSON (5.0.0)
+  - Wormholy (1.5.2)
 
 DEPENDENCIES:
+  - Alamofire
   - FBSDKLoginKit
+  - NVActivityIndicatorView
+  - ReachabilitySwift
   - RealmSwift
   - ReSwift
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
+  - SDWebImage
+  - SwiftyJSON
   - Wormholy
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - NVActivityIndicatorView
+    - ReachabilitySwift
     - Realm
     - RealmSwift
     - ReSwift
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SDWebImage
+    - SwiftyJSON
     - Wormholy
 
 SPEC CHECKSUMS:
-  FBSDKCoreKit: 9cc05bec0568a5955c82eb59ae95da0fe125b88d
-  FBSDKLoginKit: ecc6fd43c81b60f5b5e9388d58f137aff4a5d00b
-  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
-  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  FBSDKCoreKit: 5d55c8f3007c9c49b793617b9102e46355fc7e17
+  FBSDKLoginKit: d46aa04d9bb9990a4deb6441736fae24a8c94496
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  Wormholy: 5a186f877829e7d488963b09f204e0186b40c9a8
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Wormholy: 3344d3591d78488d957402d51dccfbfafd6f9641
 
-PODFILE CHECKSUM: 503a3b78940bf0b4a3bd8e26e5b75bc0cfe4acb5
+PODFILE CHECKSUM: 06aeb85ebd9d79353010aca0e50b7e8c3474e4e1
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.8.4

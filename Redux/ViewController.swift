@@ -7,37 +7,52 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblViewMovieList: UITableView!
+    
+    let viewModel = MovieListViewModel()
+    let bag = DisposeBag()
+    var movieList = [Movie]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.fetchPopularMovies()
+        bindData()
     }
-
+    
+    func bindData(){
+        
+        viewModel.movieListPublishRelay.subscribe(onNext: { (movieList) in
+            self.movieList = movieList
+            self.tblViewMovieList.reloadData()
+        }).disposed(by: bag)
+    }
+    
     func setupUI(){
+        tblViewMovieList.tableFooterView = UIView()
         tblViewMovieList.dataSource = self
         tblViewMovieList.delegate = self
-        tblViewMovieList.register(UINib(nibName: String(describing: MovieItemTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MovieItemTableViewCell.self))
+        tblViewMovieList.register(UINib(nibName: String(describing: MovieTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MovieTableViewCell.self))
     }
-
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return movieList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieItemTableViewCell.self), for: indexPath) as! MovieItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieTableViewCell.self), for: indexPath) as! MovieTableViewCell
+        cell.data = movieList[indexPath.row]
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 380
     }
 }
 
