@@ -15,10 +15,13 @@ import Reachability
 
 let apiKey = "2d69f33faee189cc2f0a21c6db9b2e36"
 let baseUrl = "https://api.themoviedb.org/3/movie/"
+let searchUrl = "https://api.themoviedb.org/3/search/movie"
 let accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZDY5ZjMzZmFlZTE4OWNjMmYwYTIxYzZkYjliMmUzNiIsInN1YiI6IjVmMDQzOTM1OGEwZTliMDAzMzlhYjY2NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XA8bLCoXoNqdksu9hUZ6Qml2P08hK-lQiz66ZxMbK9g"
 
 let API_KEY = "api_key"
 let BASE_IMG_URL = "https://image.tmdb.org/t/p/w500"
+
+let query = "query"
 
 class ApiClient {
     //MARK:- NETWORK CALLS

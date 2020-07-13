@@ -11,7 +11,7 @@ import Foundation
 // MARK: - MovieListResponse
 struct MovieListResponse: Codable {
     let page, totalResults, totalPages: Int
-    let results: [Movie]
+    let results: [Movie]?
 
     enum CodingKeys: String, CodingKey {
         case page
@@ -25,12 +25,8 @@ struct MovieListResponse: Codable {
 struct Movie: Codable {
     let popularity: Double
     let voteCount: Int
-    let video: Bool
     let posterPath: String
     let id: Int
-    let adult: Bool
-    let backdropPath: String
-    let originalLanguage: OriginalLanguage
     let originalTitle: String
     let genreIDS: [Int]
     let title: String
@@ -40,11 +36,8 @@ struct Movie: Codable {
     enum CodingKeys: String, CodingKey {
         case popularity
         case voteCount = "vote_count"
-        case video
         case posterPath = "poster_path"
-        case id, adult
-        case backdropPath = "backdrop_path"
-        case originalLanguage = "original_language"
+        case id
         case originalTitle = "original_title"
         case genreIDS = "genre_ids"
         case title
@@ -52,10 +45,4 @@ struct Movie: Codable {
         case overview
         case releaseDate = "release_date"
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ko = "ko"
-    case ru = "ru"
 }

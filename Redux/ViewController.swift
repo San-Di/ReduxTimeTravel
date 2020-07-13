@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     func setupUI(){
+        searchBar.delegate = self
         tblViewMovieList.tableFooterView = UIView()
         tblViewMovieList.dataSource = self
         tblViewMovieList.delegate = self
@@ -56,3 +57,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
 }
 
+extension ViewController: UISearchBarDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.searchByMovieName(text: searchBar.text ?? "")
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
+        viewModel.fetchPopularMovies()
+    }
+}
