@@ -27,6 +27,12 @@
 		895C4F2424B462C30087E365 /* ReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C4F2324B462C30087E365 /* ReduxUITests.swift */; };
 		895C4F3924B46E690087E365 /* MovieItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895C4F3724B46E690087E365 /* MovieItemTableViewCell.swift */; };
 		895C4F3A24B46E690087E365 /* MovieItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895C4F3824B46E690087E365 /* MovieItemTableViewCell.xib */; };
+		89677E5524BC043100A1FD47 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E5424BC043100A1FD47 /* Action.swift */; };
+		89677E5724BC04DD00A1FD47 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E5624BC04DD00A1FD47 /* AppReducer.swift */; };
+		89677E5A24BC439E00A1FD47 /* SearchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E5924BC439E00A1FD47 /* SearchReducer.swift */; };
+		89677E5D24BC448200A1FD47 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E5C24BC448200A1FD47 /* SearchState.swift */; };
+		89677E5F24BC511000A1FD47 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E5E24BC511000A1FD47 /* HistoryViewController.swift */; };
+		89677E6124BC744400A1FD47 /* SliderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89677E6024BC744400A1FD47 /* SliderState.swift */; };
 		8970B84124B486D6000A5666 /* MovieItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970B83F24B486D6000A5666 /* MovieItemCollectionViewCell.swift */; };
 		8970B84224B486D6000A5666 /* MovieItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8970B84024B486D6000A5666 /* MovieItemCollectionViewCell.xib */; };
 		D99B13EB1DA83FA16ED2083D /* Pods_ReduxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE836378D92E8B2C9183AC0 /* Pods_ReduxTests.framework */; };
@@ -77,6 +83,12 @@
 		895C4F2524B462C30087E365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895C4F3724B46E690087E365 /* MovieItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemTableViewCell.swift; sourceTree = "<group>"; };
 		895C4F3824B46E690087E365 /* MovieItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieItemTableViewCell.xib; sourceTree = "<group>"; };
+		89677E5424BC043100A1FD47 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		89677E5624BC04DD00A1FD47 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		89677E5924BC439E00A1FD47 /* SearchReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReducer.swift; sourceTree = "<group>"; };
+		89677E5C24BC448200A1FD47 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
+		89677E5E24BC511000A1FD47 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		89677E6024BC744400A1FD47 /* SliderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderState.swift; sourceTree = "<group>"; };
 		8970B83F24B486D6000A5666 /* MovieItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		8970B84024B486D6000A5666 /* MovieItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		8CAF20EF465CCC0BDCF08D49 /* Pods-Redux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Redux.release.xcconfig"; path = "Target Support Files/Pods-Redux/Pods-Redux.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +185,7 @@
 		895C4F0024B462C10087E365 /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				89677E5B24BC446800A1FD47 /* state */,
 				275526F624BB4560000B2B87 /* data */,
 				275526EF24BAD150000B2B87 /* extensions */,
 				275526E324BAAE60000B2B87 /* network */,
@@ -188,6 +201,7 @@
 				895C4F0F24B462C30087E365 /* Info.plist */,
 				275526F224BB1382000B2B87 /* MovieListViewModel.swift */,
 				275526F424BB3D87000B2B87 /* MovieModel.swift */,
+				89677E5E24BC511000A1FD47 /* HistoryViewController.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -213,6 +227,8 @@
 		895C4F3124B462C90087E365 /* reducers */ = {
 			isa = PBXGroup;
 			children = (
+				89677E5624BC04DD00A1FD47 /* AppReducer.swift */,
+				89677E5924BC439E00A1FD47 /* SearchReducer.swift */,
 			);
 			path = reducers;
 			sourceTree = "<group>";
@@ -220,6 +236,7 @@
 		895C4F3224B462D50087E365 /* actions */ = {
 			isa = PBXGroup;
 			children = (
+				89677E5424BC043100A1FD47 /* Action.swift */,
 			);
 			path = actions;
 			sourceTree = "<group>";
@@ -251,6 +268,15 @@
 				275526E924BAB1DD000B2B87 /* MovieTableViewCell.xib */,
 			);
 			path = xibs;
+			sourceTree = "<group>";
+		};
+		89677E5B24BC446800A1FD47 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				89677E5C24BC448200A1FD47 /* SearchState.swift */,
+				89677E6024BC744400A1FD47 /* SliderState.swift */,
+			);
+			path = state;
 			sourceTree = "<group>";
 		};
 		977F5FBB9AC5297F20250A6C /* Pods */ = {
@@ -519,6 +545,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				275526F524BB3D87000B2B87 /* MovieModel.swift in Sources */,
+				89677E5A24BC439E00A1FD47 /* SearchReducer.swift in Sources */,
+				89677E5524BC043100A1FD47 /* Action.swift in Sources */,
+				89677E5D24BC448200A1FD47 /* SearchState.swift in Sources */,
+				89677E5724BC04DD00A1FD47 /* AppReducer.swift in Sources */,
 				275526F124BAD15E000B2B87 /* Extension.swift in Sources */,
 				275526F824BB456D000B2B87 /* Movie.swift in Sources */,
 				895C4F0624B462C10087E365 /* ViewController.swift in Sources */,
@@ -526,9 +556,11 @@
 				275526EA24BAB1DD000B2B87 /* MovieTableViewCell.swift in Sources */,
 				275526E524BAAE75000B2B87 /* ApiConfig.swift in Sources */,
 				895C4F3924B46E690087E365 /* MovieItemTableViewCell.swift in Sources */,
+				89677E6124BC744400A1FD47 /* SliderState.swift in Sources */,
 				895C4F0224B462C10087E365 /* AppDelegate.swift in Sources */,
 				895C4F0424B462C10087E365 /* SceneDelegate.swift in Sources */,
 				275526EE24BABD9F000B2B87 /* BaseResponse.swift in Sources */,
+				89677E5F24BC511000A1FD47 /* HistoryViewController.swift in Sources */,
 				275526F324BB1382000B2B87 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

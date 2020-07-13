@@ -44,8 +44,11 @@ class MovieListViewModel {
             return Observable.just(nil)
             
         }).subscribe(onNext: { (data) in
+            
             if let movieList = data?.results{
+                store.dispatch(SearchAction.addNewSearch(SearchWords(keyword: text, resultList: movieList)))
                 self.movieListPublishRelay.accept(movieList)
+                
             }
         }, onError: { (error) in
             print("Error >>>> \(error.localizedDescription)")

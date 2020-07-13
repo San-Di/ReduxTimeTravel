@@ -17,7 +17,11 @@ target 'Redux' do
   pod 'NVActivityIndicatorView'
   pod 'SwiftyJSON'
   pod 'ReachabilitySwift'
+  pod 'MSCircularSlider'
+  
+  
   target 'ReduxTests' do
+    
     inherit! :search_paths
     # Pods for testing
   end

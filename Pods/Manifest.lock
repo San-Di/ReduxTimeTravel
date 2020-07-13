@@ -10,6 +10,7 @@ PODS:
     - FBSDKLoginKit/Login (= 6.3.0)
   - FBSDKLoginKit/Login (6.3.0):
     - FBSDKCoreKit (~> 6.3.0)
+  - MSCircularSlider (1.3.2)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
@@ -35,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FBSDKLoginKit
+  - MSCircularSlider
   - NVActivityIndicatorView
   - ReachabilitySwift
   - RealmSwift
@@ -50,6 +52,7 @@ SPEC REPOS:
     - Alamofire
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - MSCircularSlider
     - NVActivityIndicatorView
     - ReachabilitySwift
     - Realm
@@ -66,6 +69,7 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   FBSDKCoreKit: 5d55c8f3007c9c49b793617b9102e46355fc7e17
   FBSDKLoginKit: d46aa04d9bb9990a4deb6441736fae24a8c94496
+  MSCircularSlider: 07fe922e6a7e05fb67e876d449e365327fdad3d1
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Wormholy: 3344d3591d78488d957402d51dccfbfafd6f9641
 
-PODFILE CHECKSUM: 06aeb85ebd9d79353010aca0e50b7e8c3474e4e1
+PODFILE CHECKSUM: e0e03dee37569c878f7eb8233dc37d2947a1773d
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

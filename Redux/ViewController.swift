@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ReSwift
 
 class ViewController: UIViewController {
     

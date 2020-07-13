@@ -46,3 +46,8 @@ struct Movie: Codable {
         case releaseDate = "release_date"
     }
 }
+
+struct SearchWords{
+    let keyword: String
+    let resultList: [Movie]
+}
